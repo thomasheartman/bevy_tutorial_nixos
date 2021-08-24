@@ -58,7 +58,6 @@ pkgs.mkShell {
       writeScriptBin "watch" ''
         #!${stdenv.shell}
         cd ${toString ./.} && ${watchexec}/bin/watchexec -e rs --clear "run"
-        ${cargo}/bin/cargo run --features bevy/dynamic
       ''
     )
 
